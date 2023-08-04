@@ -1,0 +1,93 @@
+ <!-- This class is intended to calculate one's BMI score -->
+<!DOCTYPE html> 
+<html>
+<head>  
+<div class="Bootstrap beginnings">
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="buttons.css">
+<title>BMI</title>
+</div>
+ <!-- BMI Calc. Function -->
+<script>
+	function BMIcalc() { 
+height = document.getElementById("height").value;
+weight = document.getElementById("weight").value; h2 = height * height;
+wOh = weight/h2; 
+document.getElementById("fin").innerHTML = wOh * 703;
+ } 
+document.body.style.backgroundColor = "#ffe0ff";
+</script>
+
+ </head> 
+ 
+ 
+ <!-- Page Start -->
+<body>
+
+<div class="container">
+
+ <!-- Header -->
+  <div class="site-header">
+  <div class="row">
+   <!-- BMI Logo -->
+<img src="download.png" class="img-fluid" width="70" height="50">
+</div>
+</div>
+
+  <!-- Content -->
+  <div class="row">
+  
+  <!-- Calculator -->
+    <div class="col-sm-4">
+    
+     <!-- Title -->
+<h1> COME FIND <br>OUT YOUR<br> BMI</h1>
+<form> 
+ <!-- Weight Text -->
+<label for="w">weight (lbs):</label><br> 
+ <!-- Weight Button -->
+<input type="text" id="weight" name="weight" value="weight"><br> 
+ <!-- Height Text -->
+<label for="h">height (in.):</label><br> 
+<!-- Height Button -->
+<input type="text" id="height" name="height in inches" value="height"><br>
+<!-- BMI Button that calls BMI function-->
+<br> 
+
+<hr>
+  <div class="btn-1" onClick="BMIcalc()" value="Submit">
+    <c ><span>Calculate</span></c>
+  </div>
+  
+  
+<p> Your BMI Score is :  <br> <span id = "fin"></span></p> 
+
+</div>
+
+ 
+  <!-- scale image -->
+ <div class="col-sm-8">
+<img src="scale.jpg" class="img-fluid" width="460" height="460">
+</div>
+</div>
+</form>
+  <!-- end of content -->
+ <hr>
+ <hr>
+  <hr>
+   <!-- footer -->
+  <div class="row">
+ <div class="col-sm-12">
+<pf> @2023 BMI ALL RIGHTS RESERVED.</pf>
+</div>
+</div>
+
+  <div class="row">
+ <div class="col-sm-12">
+<pf>BMI is Powered by Austin College</pf>
+</div>
+</div>
+ <!-- end of footer -->
+ </body>
+
+ </html>

@@ -1,0 +1,42 @@
+body{
+	padding:40px;
+	background-color: #ffe0ff;
+}
+
+.container{
+	max-width:600px;
+	font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: #ffe0ff;
+}
+form{
+
+}
+p {
+    font-weight: 100px;
+    font-size: 120%;
+    font-style: italic;
+    
+}
+
+.result{
+	font-weight: 80px;
+    font-size: 90%;
+    font-style: italic;
+}
+
+.result .title{
+	text-align:left;
+	font-weight: 80px;
+    font-size: 120%;
+    font-style: italic;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}

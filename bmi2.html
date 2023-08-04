@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html>
+<link rel="stylesheet" href="err.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+<script>
+
+$(document).ready(function(){
+	var form = $("form");
+	
+	form.on("submit", function(e){
+		e.preventDefault();
+		var resultDiv = $(".result .title");
+		
+		function calcBMI(){
+			var weight = $("#weight").val();
+	    var height = $("#height").val();
+			var bmi = (weight / (height * height))*703;
+			return bmi;
+		
+		}
+		resultDiv.html(calcBMI());
+	});
+});
+</script>
+  <div class="row">
+   <!-- BMI Logo -->
+<img src="download.png" class="img-fluid" width="70" height="50">
+</div>
+<section class="container">
+
+
+	<form>
+	<div class="row">
+	
+	<div class="column">
+		<div class="field">
+		
+		 <!-- Title -->
+	<h1>COME FIND<br> OUT YOUR <br>BMI</h1>
+	
+		 <!-- weight -->
+		<label for="" class="label"> weight(lbs):</label>
+		<br>
+		<input id="weight" class="input" type="number">
+	</div>
+	
+	<div class="field">
+	 <!--height -->
+		<label class="label">height (in.):</label>
+		<br>
+		<input id="height" class="input" type="text">
+	</div>
+	<br>
+	
+	 <!-- calculate button -->
+		<input class="button is-link is-outlined " type="submit" value="CALCULATE">
+	
+		</div>
+		<div class="column">
+			<img src="scale.jpg" class="img-fluid" width="300" height="300">
+		</div>
+		</div>
+	</form>
+
+	 <!-- BMI score-->
+	<div class="result">
+	<p>Your BMI Score is :</p>
+		<p class="title"</p>
+	</div>
+	
+	 <!-- footer -->
+		<div class="field">
+		<label class="label">@2023 BMI ALL RIGHTS RESERVED.</label>
+		<br>
+	<label class="label">BMI is Powered by Austin College</label>
+	</div>
+	
+</section>
+
+</html>

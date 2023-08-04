@@ -1,0 +1,71 @@
+
+.btn-1,
+.btn-2 {
+  width: 250px;
+  height: 150px;
+  display: left;
+  justify-content: absolute;
+  align-items: center;
+  flex-direction: column;
+}
+/* Created by http://grohit.com/  */
+footer c,
+.btn-1 c,
+.btn-2 c {
+  text-decoration: none;
+  border: 2px solid white;
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+span {
+  position: relative;
+  /* z-index because when we put bg to before and after this span text will not be visible */
+  z-index: 3;
+}
+
+/* Button 1 styles */
+
+.btn-1 c::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  width: calc(100% + 6px);
+  /*100% plus double the times left values*/
+  height: calc(100% - 10px);
+  background-color: #4f74ff;
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-1 c:hover::before,
+.btn-2 c:hover::before {
+  transform: scaleY(0);
+}
+
+.btn-1 c::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  width: calc(100% - 10px);
+  /*100% plus double the times left values*/
+  height: calc(100% + 10px);
+  background-color: #4f74ff;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+/* Created by http://grohit.com/  */
+
+.btn-1 c:hover::after,
+.btn-2 c:hover::after {
+  transform: scaleX(0);
+}
+
+
+
